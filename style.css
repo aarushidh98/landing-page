@@ -593,7 +593,7 @@ nav {
 
 /* ══════════════ FINAL CTA ══════════════ */
 #final-cta {
-  background: linear-gradient(135deg, #FF6B9D 0%, #FF9A5C 50%, #FFD93D 100%);
+  background: linear-gradient(135deg, #FFD93D 0%, #FF9A5C 50%, #FF6B9D 100%);
   color: white; padding: 5rem 0; margin-top: -32px; border-radius: 40px;
   position: relative; overflow: hidden;
 }
