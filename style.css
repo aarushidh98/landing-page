@@ -443,8 +443,8 @@ nav {
 }
 .exp-highlights li svg { color: var(--lime); width: 20px; height: 20px; flex-shrink: 0; }
 
-.exp-img { border-radius: 0; overflow: hidden; border: none; box-shadow: none; padding: 0; }
-.exp-img img { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: var(--soft-blue); border-radius: 0; }
+.exp-img { border-radius: 0; overflow: hidden; border: none; box-shadow: none; padding: 0; height: 100%; }
+.exp-img img { width: 100%; height: 100%; object-fit: cover; background: var(--soft-blue); border-radius: 0; aspect-ratio: unset; display: block; }
 
 
 /* ══════════════ SAFETY ══════════════ */
