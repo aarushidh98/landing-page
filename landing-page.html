@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bachpan Play School — Premium Preschool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Funky childish fonts: Lilita One (headings) + Baloo 2 (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style></style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <!-- <div class="logo-icon"></div> -->
+            <div class="logo-text">
+                <div class="brand"><img src="bachpanlogo.webp" height="auto" width="100"></div>
+                <!-- <div class="sub">PLAY SCHOOL</div> -->
+            </div>
+            </div>
+            <div class="nav-links">
+            <button onclick="scrollToSection('concerns')">Parent Concerns</button>
+            <button onclick="scrollToSection('values')">Why Bachpan</button>
+            <button onclick="scrollToSection('experience')">A Day at Bachpan</button>            
+            <button onclick="scrollToSection('trust')">Trust &amp; Safety</button>
+            <button onclick="scrollToSection('journey')">Growth Journey</button>
+            <button onclick="scrollToSection('testimonials')">Parents Say</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+            </div>
+            <div class="nav-actions">
+            <!-- <button class="btn-outline" onclick="openVisitModal()">Book Visit</button> -->
+            <button class="btn-solid" onclick="openAdmission()">Enquire Now</button>
+            </div>
+            <button class="hamburger" onclick="toggleMobileMenu()"><i data-lucide="menu" style="width:24px;height:24px"></i></button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <button onclick="scrollTo('concerns')">Parent Concerns</button>
+            <button onclick="scrollTo('value')">Why Bachpan</button>
+            <button onclick="scrollTo('experience')">A Day at Bachpan</button>            
+            <button onclick="scrollTo('trust')">Trust &amp; Safety</button>
+            <button onclick="scrollTo('journey')">Growth Journey</button>
+            <button onclick="scrollTo('testimonials')">Parents Say</button>
+            <button onclick="scrollTo('contact')">Contact</button>
+            <div class="mobile-btns">
+            <!-- <button class="mobile-btn-outline" onclick="openVisitModal()">Book a Visit</button> -->
+            <button class="mobile-btn-solid" onclick="openAdmissionModal()">Enquire for Admission</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- HERO -->
+    <section class="hero">
+    <!-- Fun floating shapes -->
+    <div style="position:absolute;top:100px;left:40px;font-size:52px;opacity:0.25;animation:floatBob 4s ease-in-out infinite;pointer-events:none">🌟</div>
+    <div style="position:absolute;top:180px;right:80px;font-size:44px;opacity:0.2;animation:floatBob 3.2s ease-in-out infinite .6s;pointer-events:none">🎈</div>
+    <div style="position:absolute;bottom:130px;left:80px;font-size:40px;opacity:0.2;animation:floatBob 3.8s ease-in-out infinite 1.1s;pointer-events:none">🎨</div>
+    <div style="position:absolute;bottom:160px;right:120px;font-size:48px;opacity:0.2;animation:floatBob 4.5s ease-in-out infinite .3s;pointer-events:none">🚀</div>
+    <div class="hero-inner">
+        <div>
+        <div class="hero-badge">🏫 EST. 2004 • 1200+ BRANCHES ACROSS INDIA</div>
+        <h1>Where Your Child's <span>First Step</span><br>Becomes a Confident Future.</h1>
+        <p>A safe, loving environment where play sparks curiosity, confidence, and lifelong learning. 
+        <br>At Bachpan, we nurture your child's innate potential through a scientifically designed play-way curriculum.</p>
+        <div class="hero-btns">
+            <button class="hero-btn-primary" onclick="openAdmission()">
+            Book a Visit <i data-lucide="calendar" style="width:20px;height:20px"></i>
+            </button>
+            <button class="hero-btn-secondary" onclick="openAdmissionModal()">
+            Get Admission Details
+            </button>
+        </div>
+        <!-- <div class="hero-stats">
+            <div class="hero-stat"><div class="num">4,200+</div><div class="label">Happy Families</div></div>
+            <div class="hero-stat"><div class="num">1200+</div><div class="label">Premium Branches</div></div>
+            <div class="hero-stat"><div class="num">98%</div><div class="label">Parent Satisfaction</div></div>
+        </div> -->
+        </div>
+        <div class="hero-visual">
+        <div class="hero-img-wrap">
+            <img src="/images/hero-child.jpg" alt="Happy child at Bachpan" onerror="this.style.minHeight='400px';this.style.background='#A3C1D9'" />
+        </div>
+        <div class="hero-badge-card">
+            <div class="hero-badge-icon"><i data-lucide="heart" style="width:22px;height:22px"></i></div>
+            <div><div class="title">Loved by Parents</div><div class="sub">Since 2004</div></div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="bst-wrap">
+        <!-- Glows -->
+        <div class="bst-glow bst-glow1"></div>
+        <div class="bst-glow bst-glow2"></div>
+        <div class="bst-glow bst-glow3"></div>
+
+        <!-- Dots -->
+        <div class="bst-el bst-dot" style="top:14px;left:7%;animation-delay:0s;background:#ff7a1a;"></div>
+        <div class="bst-el bst-dot" style="bottom:12px;left:12%;animation-delay:0.3s;background:#2980ff;"></div>
+        <div class="bst-el bst-dot" style="top:10px;left:35%;animation-delay:0.5s;background:#ff7a1a;width:5px;height:5px;"></div>
+        <div class="bst-el bst-dot" style="bottom:10px;left:60%;animation-delay:1s;background:#2980ff;"></div>
+        <div class="bst-el bst-dot" style="top:16px;right:12%;animation-delay:0.3s;background:#ff7a1a;"></div>
+        <div class="bst-el bst-dot" style="bottom:14px;right:7%;animation-delay:0.8s;background:#2980ff;width:5px;height:5px;"></div>
+
+        <!-- Rings -->
+        <div class="bst-el bst-ring" style="width:22px;height:22px;border:2px solid rgba(255,122,26,0.3);top:8px;left:28%;animation-delay:0s;"></div>
+        <div class="bst-el bst-ring" style="width:16px;height:16px;border:1.5px solid rgba(41,128,255,0.3);bottom:8px;left:42%;animation-delay:0.6s;"></div>
+        <div class="bst-el bst-ring" style="width:20px;height:20px;border:2px solid rgba(255,122,26,0.25);bottom:6px;right:28%;animation-delay:1s;"></div>
+        <div class="bst-el bst-ring" style="width:12px;height:12px;border:1.5px solid rgba(41,128,255,0.25);top:10px;right:35%;animation-delay:0.4s;"></div>
+
+        <!-- Triangles -->
+        <div class="bst-el bst-tri bst-tri-orange" style="top:12px;left:56%;animation-delay:0.7s;"></div>
+        <div class="bst-el bst-tri bst-tri-blue" style="bottom:14px;right:44%;animation-delay:0s;"></div>
+
+        <!-- Squares -->
+        <div class="bst-el bst-square" style="background:rgba(41,128,255,0.2);top:12px;left:65%;transform:rotate(30deg);animation-delay:0.9s;"></div>
+        <div class="bst-el bst-square" style="background:rgba(255,122,26,0.2);bottom:12px;right:16%;transform:rotate(20deg);animation-delay:0.2s;"></div>
+
+        <!-- Sparkles -->
+        <!-- <div class="bst-burst" style="top:6px;left:22%;animation-delay:0s;">
+            <div class="bst-burst-inner"></div>
+            <div class="bst-burst-inner2"></div>
+        </div>
+        <div class="bst-burst" style="bottom:8px;left:49%;animation-delay:0.5s;transform:scale(0.7);">
+            <div class="bst-burst-inner"></div>
+            <div class="bst-burst-inner2"></div>
+        </div>
+        <div class="bst-burst" style="top:5px;right:21%;animation-delay:1s;transform:scale(0.8);">
+            <div class="bst-burst-inner"></div>
+            <div class="bst-burst-inner2"></div>
+        </div> -->
+
+        <!-- Stats -->
+        <div class="bst-stat">
+            <div class="bst-num-wrap">
+            <span class="bst-num bst-orange">4200</span>
+            <span class="bst-sup bst-sup-orange">+</span>
+            </div>
+            <div class="bst-desc">
+            <span class="bst-desc-title">Happy Families</span>
+            <span class="bst-desc-sub">Across India</span>
+            </div>
+        </div>
+
+        <div class="bst-divider"></div>
+
+        <div class="bst-stat">
+            <div class="bst-num-wrap">
+            <span class="bst-num bst-blue">1200</span>
+            <span class="bst-sup bst-sup-blue">+</span>
+            </div>
+            <div class="bst-desc">
+            <span class="bst-desc-title">Premium Branches</span>
+            <span class="bst-desc-sub">Pan India Network</span>
+            </div>
+        </div>
+
+        <div class="bst-divider"></div>
+
+        <div class="bst-stat">
+            <div class="bst-num-wrap">
+            <span class="bst-num bst-orange">98</span>
+            <span class="bst-sup bst-sup-orange">%</span>
+            </div>
+            <div class="bst-desc">
+            <span class="bst-desc-title">Parent Satisfaction</span>
+            <span class="bst-desc-sub">Verified Reviews</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARENT CONCERNS -->
+    <section id="concerns" class="concerns">
+    <div class="center">
+        <div class="section-label">WE UNDERSTAND YOUR WORRIES</div>
+        <h2>The Questions Every Parent Asks</h2>
+        <p class="concerns-p">You are not alone. These are the exact concerns we hear from parents every single day, and we address each one with care.
+        At Bachpan, every answer is a promise we keep everyday</p>
+    </div>
+    <div class="concerns-grid" id="concernsGrid">
+        <div class="concern-card">
+            <h3 class="concern-q">Will my child be safe?</h3>
+            <p class="concern-a">Every campus has CCTV, fingerprint entry, trained guards, 1:8 child-teacher ratio, and medical kits. Hygiene protocols are uncompromising.</p>
+            <div class="concerns-footer">Bachpan solves this →</div>
+        </div>
+        <div class="concern-card orange">
+            <h3 class="concern-q">Will they adjust without me?</h3>
+            <p class="concern-a">Our 12-day gentle transition program includes parent presence options. 96% of children are smiling by week two.</p>
+            <div class="concerns-footer">Bachpan solves this →</div>
+        </div>
+        <div class="concern-card">
+            <h3 class="concern-q">Will they actually learn something?</h3>
+            <p class="concern-a">Play-based curriculum approved by early childhood experts. Children master pre-reading, pre-math, emotional literacy, and confidence by graduation.</p>
+            <div class="concerns-footer">Bachpan solves this →</div>
+        </div>
+    </div>    
+    </section>
+
+
+    <!-- ═══ VALUES ═══ -->
+    <section class="divider" id="values">
+    <div class="values-inner">
+        <div class="values-left">
+        <div class="section-blue">THE BACHPAN DIFFERENCE</div>
+        <h2>Not Just a Preschool, A Foundation for Life.</h2>
+        <p class="values-inner-p">Around 200,000+ Parents Trust Us with Their Child's Future. We don't just provide a classroom; we provide a launchpad. 
+        Our approach is designed to nurture the 'whole child' intellectually, physically, and emotionally.</p>
+        <img class="hero-img-wrap" src="/images/group-activity.jpg">
+        </div>
+        <div class="values-right">
+        <div class="value-card">
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div>
+                <h4>Play-Based Structured Learning</h4>
+                <p>Every activity is purposeful. Language, math, art, and science are discovered through joyful, hands-on play.</p></div>
+        </div>
+        <div class="card-wrapper">
+            <div class="value-card-blue">
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div>
+                <h4>Communication<br/> &amp; Confidence First</h4>
+                <p>Small groups and expressive arts help children speak up, listen, and lead — building fearless communicators.</p></div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="value-card-blue">
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div>
+                <h4>Safe & Hygienic Sanctuary</h4>
+                <p>Air-purified classrooms, sanitized toys hourly, child-safe furniture and constant supervision.</p></div>
+            </div>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <div>
+                <h4>Daily Parent Updates</h4>
+                <p>Photos, learning highlights and milestones — sent directly to you every afternoon.</p></div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section class="divider" id="experience" style="padding:0;">
+    <div id="experience" style="max-width:1200px;margin:0 auto;padding:80px 24px;">
+        <div class="exp-header center">
+            <div class="center">
+                <div class="section-label">IMMERSIVE &amp; LOVING</div>
+                <h2 class="section-title">A Day at Bachpan</h2>        
+                <p>Click any tab to step inside our world. Every moment is thoughtfully designed for comfort, joy, and growth. Take a peek into the joyful daily routine that keeps our little ones engaged and excited.</p>
+            </div>
+        </div>
+        <div class="exp-tabs">
+        <button class="exp-tab active" onclick="setExperience(0,this)">Warm Welcome</button>
+        <button class="exp-tab" onclick="setExperience(1,this)">Play Based Learning</button>
+        <button class="exp-tab" onclick="setExperience(2,this)">Creative Play</button>
+        <button class="exp-tab" onclick="setExperience(3,this)">Lunch & Rest</button>
+        <button class="exp-tab" onclick="setExperience(4,this)">Outdoor Exploration</button>
+        <button class="exp-tab" onclick="setExperience(5,this)">Joyfull GoodBye</button>
+        </div>
+
+        <div class="exp-panel active" id="exp-0">
+        
+        <div class="exp-content">
+            <div class="exp-time">8:30 AM</div>
+            <h4>Warm Welcome &amp; Circle Time</h4>
+            <p>Children are greeted personally, settle in, and gather for songs, stories, and mindfulness.</p>
+            <ul class="exp-highlights">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Personal greeting</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Morning circle</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mindfulness moments</li>
+            </ul>
+        </div>
+        <div class="exp-img"><img src="/images/-child.jpg" alt="Welcome Circle Time" /></div>
+        </div>
+
+        <div class="exp-panel" id="exp-1">        
+        <div class="exp-content">
+            <div class="exp-time">9:45 AM</div>
+            <h4>Play-Based Structured Learning</h4>
+            <p>Hands-on activities develop literacy, numeracy, and critical thinking through joyful play.</p>
+            <ul class="exp-highlights">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Building blocks</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Early math &amp; reading</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sensory exploration</li>
+            </ul>
+        </div>
+        <div class="exp-img"><img src="/images/learning.jpg" alt="Play-Based Learning" /></div>
+        </div>
+
+        <div class="exp-panel" id="exp-2">        
+        <div class="exp-content">
+            <div class="exp-time">11:15 AM</div>
+            <h4>Creative Arts &amp; Interactive Play</h4>
+            <p>Imaginative crafts, music, movement, and nutritious snacks in a clean setting with joyful learning experiences.</p>
+            <ul class="exp-highlights">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Art &amp; craft</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Music &amp; dance</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nutritious snack</li>
+            </ul>
+        </div>
+        <div class="exp-img"><img src="/images/art-activity.jpg" alt="Creative Arts"/></div>
+        </div>
+
+        <div class="exp-panel" id="exp-3">        
+        <div class="exp-content">
+            <div class="exp-time">1:00 PM</div>
+            <h4>Healthy Lunch &amp; Rest</h4>
+            <p>Fresh lunch, nature walks, then calm quiet time for rest and recharge in a peaceful, nurturing environment.</p>
+            <ul class="exp-highlights">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Outdoor play</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nature discovery</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rest &amp; recharge</li>
+            </ul>
+        </div>
+        <div class="exp-img"><img src="/images/safety.jpg" alt="Rest Room" /></div>
+        </div>
+
+        <div class="exp-panel" id="exp-4">        
+        <div class="exp-content">
+            <div class="exp-time">1:00 PM</div>
+            <h4>Outdoor Exploration &amp; Rest</h4>
+            <p>Fresh air play, nature walks, then calm quiet time for rest and recharge in a peaceful, balanced routine.</p>
+            <ul class="exp-highlights">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Outdoor play</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Nature discovery</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rest &amp; recharge</li>
+            </ul>
+        </div>
+        <div class="exp-img"><img src="/images/playground.jpg" alt="Outdoor Play" /></div>
+        </div>
+
+        <div class="exp-panel" id="exp-5">        
+        <div class="exp-content">
+            <div class="exp-time">3:00 PM</div>
+            <h4>Storytelling &amp; Happy Goodbyes</h4>
+            <p>Beautiful stories, reflection, and warm handovers with personalized parent updates.</p>
+            <ul class="exp-highlights">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Story time</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Reflection</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Daily parent update</li>
+            </ul>
+        </div>
+        <div class="exp-img"><img src="/images/confident.jpg" alt="Storytelling" /></div>
+        </div>
+    </div>
+    </section>
+
+    <!-- TRUST & SAFETY -->
+    <section class="safety-section" id="trust">   
+        <div class="center">     
+        <div class="section-blue">YOUR CHILD’S SAFETY IS OUR PRIORITY</div>
+        <h2>Every detail is designed with love and uncompromising care.</h2>
+        </div>
+        <div class="safety-grid">
+            <div class="safety-item">
+            <div class="safety-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                </svg>
+            </div>
+            <div class="safety-text">
+                <h3 class="safety-title">CCTV in all areas</h3>
+                <p class="safety-desc">Live parent access via secure app</p>
+            </div>
+            </div>
+
+            <div class="safety-item">
+            <div class="safety-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <path d="M16 3.128a4 4 0 0 1 0 7.744"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <circle cx="9" cy="7" r="4"/>
+                </svg>
+            </div>
+            <div class="safety-text">
+                <h3 class="safety-title">1:8 Teacher-Child Ratio</h3>
+                <p class="safety-desc">Personalized attention always</p>
+            </div>
+            </div>
+
+            <div class="safety-item">
+            <div class="safety-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/>
+                </svg>
+            </div>
+            <div class="safety-text">
+                <h3 class="safety-title">Medical Trained Staff</h3>
+                <p class="safety-desc">First aid & CPR certified</p>
+            </div>
+            </div>
+
+            <div class="safety-item">
+            <div class="safety-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
+                <circle cx="12" cy="8" r="6"/>
+                </svg>
+            </div>
+            <div class="safety-text">
+                <h3 class="safety-title">Hygienic & Sanitized</h3>
+                <p class="safety-desc">Daily deep cleaning protocols</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ GROWTH JOURNEY TIMELINE ═══════════════ -->
+        <section id="journey">
+        <div class="inner">
+            <div class="center">
+            <div class="section-label">THE JOURNEY THAT MATTERS MOST</div>
+            <h2>From Shy First Day to<br/> Confident Little Star</h2>
+            <p id="journey-p">Click each milestone to see exactly how we nurture your child every step of the way.</p>
+            </div>
+
+            <div class="timeline-nav" style="margin-top:3.5rem">
+            <div class="timeline-line"></div>
+            <button class="timeline-btn active" id="tlBtn0" onclick="setTimeline(0)">
+                <div class="timeline-dot"></div>
+                <span class="t-label">Day 1</span>
+                <span class="t-time">First Day</span>
+            </button>
+            <button class="timeline-btn" id="tlBtn1" onclick="setTimeline(1)">
+                <div class="timeline-dot"></div>
+                <span class="t-label">Week 2</span>
+                <span class="t-time">Adjusting</span>
+            </button>
+            <button class="timeline-btn" id="tlBtn2" onclick="setTimeline(2)">
+                <div class="timeline-dot"></div>
+                <span class="t-label">Month 2</span>
+                <span class="t-time">Communicating</span>
+            </button>
+            <button class="timeline-btn" id="tlBtn3" onclick="setTimeline(3)">
+                <div class="timeline-dot"></div>
+                <span class="t-label">Month 6</span>
+                <span class="t-time">Confident</span>
+            </button>
+            </div>
+
+            <div id="timelineDetails">
+                <div class="timeline-detail active" id="tlDetail0">
+                    <div class="timeline-img">
+                    <img src="/images/firstday.jpg" alt="Gentle Separation" onerror="this.style.background='#A3C1D9';this.style.minHeight='200px'" style="background: rgb(163, 193, 217); min-height: 200px;">
+                    </div>
+                    <div>
+                    <div class="timeline-period">FIRST DAY</div>
+                    <div class="timeline-heading">Gentle Separation</div>
+                    <p class="timeline-text">Our gentle transition program helps your little one feel secure. With a loving teacher by their side, tears quickly turn into curiosity.</p>
+                    <button class="btn-journey" onclick="openAdmission()">START THE JOURNEY FOR MY CHILD →</button>
+                    </div>
+                </div>
+                
+                <div class="timeline-detail" id="tlDetail1">
+                    <div class="timeline-img">
+                    <img src="/images/play-learning.jpg" alt="Making Friends" onerror="this.style.background='#A3C1D9';this.style.minHeight='200px'" style="background: rgb(163, 193, 217); min-height: 200px;">
+                    </div>
+                    <div>
+                    <div class="timeline-period">ADJUSTING</div>
+                    <div class="timeline-heading">Making Friends</div>
+                    <p class="timeline-text">Through play, children discover shared joy. Our small groups build friendships, helping your child feel happy and included.</p>
+                    <button class="btn-journey" onclick="openAdmission()">START THE JOURNEY FOR MY CHILD →</button>
+                    </div>
+                </div>
+                
+                <div class="timeline-detail" id="tlDetail2">
+                    <div class="timeline-img">
+                    <img src="/images/playgroup.jpg" alt="Finding Their Voice" onerror="this.style.background='#A3C1D9';this.style.minHeight='200px'" style="background: rgb(163, 193, 217); min-height: 200px;">
+                    </div>
+                    <div>
+                    <div class="timeline-period">COMMUNICATING</div>
+                    <div class="timeline-heading">Finding Their Voice</div>
+                    <p class="timeline-text">Storytelling, songs, and open-ended questions develop language. Your child starts expressing thoughts, needs, and beautiful stories.</p>
+                    <button class="btn-journey" onclick="openAdmission()">START THE JOURNEY FOR MY CHILD →</button>
+                    </div>
+                </div>
+                
+                <div class="timeline-detail" id="tlDetail3">
+                    <div class="timeline-img">
+                    <img src="/images/confident-child.jpg" alt="Ready for the World" onerror="this.style.background='#A3C1D9';this.style.minHeight='200px'" style="background: rgb(163, 193, 217); min-height: 200px;">
+                    </div>
+                    <div>
+                    <div class="timeline-period">CONFIDENT</div>
+                    <div class="timeline-heading">Ready for the World</div>
+                    <p class="timeline-text">Independence, empathy, and problem-solving skills flourish. Your child leaves Bachpan as a confident, curious learner ready for the next chapter.</p>
+                    <button class="btn-journey" onclick="openAdmission()">START THE JOURNEY FOR MY CHILD →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+    <section id="testimonials">
+    <div class="inner">
+        <div class="center">
+        <div class="section-blue">REAL STORIES FROM REAL PARENTS</div>
+        <h2>Parents who chose Bachpan never looked back</h2>
+        </div>
+
+        <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Cards injected by JS -->
+        </div>
+
+        <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+    </section>
+
+
+    <!-- ═══════════════ ADMISSIONS OPEN ═══════════════ -->
+    <section id="final-cta">
+    <div class="cta-inner">
+
+        <!-- LEFT: your school image -->
+        <div class="cta-image-col">
+        <img src="/images/growth-journey.jpg" alt="Students in classroom" />
+        </div>
+
+        <!-- RIGHT: all your content -->
+        <div class="cta-content-col">
+        <div class="cta-admissions-badge">ADMISSIONS OPEN FOR 2026-27</div>
+        <h2>Limited seats. <span>Don't miss this year.</span></h2>
+
+        <div class="countdown">
+            <div class="count-block">
+            <span class="count-num" id="daysLeft">00</span>
+            <span class="count-unit">days</span>
+            </div>
+            <span class="count-sep">:</span>
+            <div class="count-block">
+            <span class="count-num" id="hoursLeft">00</span>
+            <span class="count-unit">hrs</span>
+            </div>
+            <span class="count-sep">:</span>
+            <div class="count-block">
+            <span class="count-num" id="minsLeft">00</span>
+            <span class="count-unit">mins</span>
+            </div>
+            <span class="count-sep">:</span>
+            <div class="count-block">
+            <span class="count-num" id="secsLeft">00</span>
+            <span class="count-unit">secs</span>
+            </div>
+        </div>
+
+        <div class="cta-btns">
+            <button class="btn-cta-primary" onclick="openVisit()">Book a Visit Today</button>
+            <button class="btn-cta-outline" onclick="openAdmission()">Secure My Child's Seat</button>
+        </div>
+        <p class="cta-note">Only few seats remaining across all centres this month</p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section id="contact">
+    <div class="contact-grid">
+        <!-- Form -->
+        <div>
+        <div class="section-label">WE ARE HERE FOR YOU</div>
+        <h2 class="section-title" style="font-size:clamp(32px,4vw,60px);letter-spacing:-2.8px;margin-top:.5rem">Speak with our admissions team</h2>
+        <p class="contact-sub">Fill this form or call us. A counselor will personally guide you through the process and answer all your questions.</p>
+
+        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-grid2">
+            <input class="form-input" name="name" placeholder="Your Name" required="">
+            <input class="form-input" name="phone" placeholder="Mobile Number" required="">
+            </div>
+            <input class="form-input" name="email" type="email" placeholder="Email Address" required="">
+            <div class="form-grid2">
+            <select class="form-input" name="age" required="">
+                <option value="">Child Age</option>
+                <option>2 years</option><option>3 years</option><option>4 years</option><option>5 years</option>
+            </select>
+            <select class="form-input" name="branch">                
+                <option>Select State</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Bangalore</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
+            </select>
+            </div>
+            <button type="submit" class="btn-submit">Request a Call →</button>
+        </form>
+
+        <div class="whatsapp-link" onclick="openWhatsApp()">
+            <svg width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18C1.62 2.1 2.45 1.23 3.53 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.77-.77a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Or message us instantly on WhatsApp
+        </div>
+        </div>
+
+        <!-- Map & Inquiries -->
+        <div>
+        <!-- <div class="section-label" style="margin-bottom:1.25rem">OUR CENTRES</div> -->
+        <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.86908925134!2d77.17897307422425!3d28.663638182669747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd7f27998d63%3A0xcab4cee068cbffb1!2sS.K%20Educations%20Pvt.%20Ltd.%20(Bachpan%20play%20school)!5e0!3m2!1sen!2sin!4v1776409983092!5m2!1sen!2sin" loading="lazy" title="Our locations"></iframe>
+        </div>
+
+        <div class="response-note">
+                <svg width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                100% of inquiries receive a personal response in under 7 business days
+            </div>
+    </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+        <div class="footer-inner">
+            <div>© Bachpan Play School. A safe, premium preschool experience since 2004.</div>
+            <div class="footer-links">
+            <span onclick="window.location.href='tel:+919810012345'">
+                <svg width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18C1.62 2.1 2.45 1.23 3.53 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.77-.77a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +91 9999-999-999
+            </span>
+            <!-- <span onclick="openWhatsApp()">WhatsApp</span> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════ INQUIRY MODAL ═══════════════ -->
+    <div class="modal-backdrop" id="modalBackdrop" style="display:none" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+        <div class="modal-inner">
+        <button class="modal-close" onclick="closeModal()">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <div class="modal-header">
+            <div class="modal-icon" id="modalIcon"></div>
+            <div>
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-sub">Our admissions counselor will connect with you soon.</div>
+            </div>
+        </div>
+
+        <form class="modal-form" id="modalForm" onsubmit="handleModalSubmit(event)">
+            <div class="form-row">
+            <div class="form-group">
+                <label>Parent Name</label>
+                <input type="text" id="mName" class="modal-input" placeholder="Full name" />
+                <span class="field-error" id="errName"></span>
+            </div>
+            <div class="form-group">
+                <label>Phone / WhatsApp</label>
+                <input type="tel" id="mPhone" class="modal-input" placeholder="9999 999 999" />
+                <span class="field-error" id="errPhone"></span>
+            </div>            
+            </div>
+            <div class="form-row">
+            <!-- <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="mEmail" class="modal-input" placeholder="you@email.com" />
+                <span class="field-error" id="errEmail"></span>
+            </div> -->
+            <div class="form-group">
+            <label>Preferred Branch</label>
+            <select id="mBranch" class="modal-input">
+                <option>Select Branch</option>
+                <option>Mumbai</option>
+                <option>Bangalore</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label>Child's Age</label>
+                <input type="text" id="mAge" class="modal-input" placeholder="2 Years"/>            
+                <span class="field-error" id="errAge"></span>
+            </div>            
+            </div>
+            
+            <div class="form-group" id="visitDateGroup" style="display:none">
+            <label>Preferred Visit Date</label>
+            <input type="date" id="mDate" class="modal-input" />
+            <span class="field-error" id="errDate"></span>
+            </div>
+            <div class="form-group">
+            <label>Anything else we should know? (Optional)</label>
+            <textarea id="mMessage" class="modal-input" rows="3" style="resize:vertical" placeholder="Special needs, preferred timings..."></textarea>
+            </div>
+            <button type="submit" class="btn-modal-submit" id="modalSubmitBtn">
+            <span id="modalBtnText"></span>
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <p class="modal-policy">We respect your time — response within 24 hours during working hours</p>
+        </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+    <div class="lightbox-backdrop" id="lightboxBackdrop" style="display:none" onclick="closeLightbox()">
+    <div class="lightbox-wrap" onclick="event.stopPropagation()">
+        <button class="lightbox-close" onclick="closeLightbox()">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="lightbox-img-wrap">
+        <img id="lbImg" src="" alt="" onerror="this.style.background='#A3C1D9'" />
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-caption">
+            <div class="lightbox-time" id="lbTime"></div>
+            <div class="lightbox-title" id="lbTitle"></div>
+            <p class="lightbox-desc" id="lbDesc"></p>
+        </div>
+        </div>
+        <div class="lightbox-nav">
+        <button class="lb-btn" onclick="changeLightbox(-1)">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Previous
+        </button>
+        <span class="lb-counter" id="lbCounter"></span>
+        <button class="lb-btn" onclick="changeLightbox(1)">
+            Next
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        </div>
+    </div>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // ─── ICON ───
+        lucide.createIcons();    
+    </script>    
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+        // ─── EXPERIENCE TABS ───
+        function setExperience(index, btn) {
+            document.querySelectorAll('.exp-tab').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('exp-' + index).classList.add('active');
+        }
+
+
+        const timelineSteps = [
+            { label:"Day 1", time:"First Day", description:"Gentle Separation", image:"/images/firstday.jpg", detail:"Our gentle transition program helps your little one feel secure. With a loving teacher by their side, tears quickly turn into curiosity." },
+            { label:"Week 2", time:"Adjusting", description:"Making Friends", image:"/images/playgroup.jpg", detail:"Through play, children discover shared joy. Our small groups build friendships, helping your child feel happy and included." },
+            { label:"Month 2", time:"Communicating", description:"Finding Their Voice", image:"/images/learning.jpg", detail:"Storytelling, songs, and open-ended questions develop language. Your child starts expressing thoughts, needs, and beautiful stories." },
+            { label:"Month 6", time:"Confident", description:"Ready for the World", image:"/images/confident.jpg", detail:"Independence, empathy, and problem-solving skills flourish. Your child leaves Bachpan as a confident, curious learner ready for the next chapter." }
+        ];
+
+        /* ── TIMELINE ── */
+        function renderTimelineDetails() {
+            const wrap = document.getElementById('timelineDetails');
+            wrap.innerHTML = timelineSteps.map((step, i) => `
+            <div class="timeline-detail${i===0?' active':''}" id="tlDetail${i}">
+                <div class="timeline-img">
+                <img src="${step.image}" alt="${step.description}" onerror="this.style.background='#A3C1D9';this.style.minHeight='200px'" />
+                </div>
+                <div>
+                <div class="timeline-period">${step.time.toUpperCase()}</div>
+                <div class="timeline-heading">${step.description}</div>
+                <p class="timeline-text">${step.detail}</p>
+                <button class="btn-journey" onclick="openAdmission()">START THIS JOURNEY FOR MY CHILD →</button>
+                </div>
+            </div>
+            `).join('');
+        }
+        function setTimeline(idx) {
+            activeTimeline = idx;
+            document.querySelectorAll('.timeline-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
+            document.querySelectorAll('.timeline-detail').forEach((d,i) => d.classList.toggle('active', i===idx));
+        }
+
+
+        /* ── TESTIMONIALS ── */
+        const testimonials = [
+            { text: "Choosing this place for my child was absolutely worth it. The teachers are caring, supportive, and genuinely dedicated to every child’s growth.", name: "Sneha Malhotra", child: "Vihaan, 2.5 yrs" },
+            { text: "Enrolling my child here was a wonderful choice. The environment is nurturing, and the staff shows real commitment to early learning", name: "Priya Sharma", child: "Aarohi, 3 yrs" },
+            { text: "This has been the best choice for my child’s development. The team is kind, engaged, and truly invested in building a strong foundation.", name: "Rahul Verma", child: "Arjun, 4 yrs" },
+            { text: "Sending my child here was the best decision. The staff is warm, attentive, and truly passionate about early childhood.", name: "Anjali Nair", child: "Kabir, 2 yrs" },
+            { text: "The facilities are immaculate and the daily updates keep us in the loop. We feel like partners in our child's growth.", name: "Deepika Iyer", child: "Meera, 3.5 yrs" },
+            { text: "Bachpan gave our shy daughter the confidence to express herself. She's a completely different child — in the best way!", name: "Kavita Rao", child: "Diya, 4 yrs" },
+            { text: "Choosing this place has been truly rewarding. The teachers are attentive & committed to nurturing child’s growth.", name: "Shikha Nagpal", child: "Aarav, 3 yrs" },
+            { text: "I’m so glad I chose this place for my child. The teachers are kind and care about every child’s learning journey.", name: "Kanchan Pawar", child: "Meera, 3.5 yrs" },
+            { text: "This place has made a positive impact on my child. The infrastructure and environment is safe for the child. It feels like a safe place.", name: "Arjun Kaim", child: "Sameer, 4 yrs" },
+
+            ];
+
+        const CARDS_PER_PAGE = 3;
+        let currentPage = 0;
+        const totalPages = Math.ceil(testimonials.length / CARDS_PER_PAGE);
+
+        const starsSVG = `
+            <svg class="star-icon" width="21" height="21" viewBox="0 0 24 24" fill="#ffb600" stroke="#ffb600" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="star-icon" width="21" height="21" viewBox="0 0 24 24" fill="#ffb600" stroke="#ffb600" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="star-icon" width="21" height="21" viewBox="0 0 24 24" fill="#ffb600" stroke="#ffb600" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="star-icon" width="21" height="21" viewBox="0 0 24 24" fill="#ffb600" stroke="#ffb600" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg class="star-icon" width="21" height="21" viewBox="0 0 24 24" fill="#ffb600" stroke="#ffb600" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        `;
+
+        function renderTestimonials() {
+            const grid = document.getElementById('testimonialsGrid');
+            const start = currentPage * CARDS_PER_PAGE;
+            const pageItems = testimonials.slice(start, start + CARDS_PER_PAGE);
+
+            grid.innerHTML = pageItems.map((t, index) => `
+        <div class="testimonial-wrap">
+            <div>
+            <div class="stars">${starsSVG}</div>
+            <blockquote class="testimonial-text">"${t.text}"</blockquote>
+            </div>
+            <div class="testimonial-footer">
+            <div class="testimonial-author">
+                <strong>${t.name}</strong>
+                <span style="font-size:15px;">${t.child}</span>
+            </div>
+            ${index === pageItems.length - 1 ? `
+                <div class="btn-next-story" onclick="nextPage()">
+                Next story
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+            ` : ''}
+            </div>
+        </div>
+        `).join('');
+
+            renderDots();
+        }
+
+        function renderDots() {
+            const dotsContainer = document.getElementById('testimonialDots');
+            dotsContainer.innerHTML = Array.from({ length: totalPages }, (_, i) => `
+            <div class="dot ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})"></div>
+            `).join('');
+        }
+
+        function goToPage(page) {
+            currentPage = page;
+            renderTestimonials();
+        }
+
+        function nextPage() {
+            currentPage = (currentPage + 1) % totalPages;
+            renderTestimonials();
+        }
+
+        // Init on load
+        renderTestimonials();
+
+        // ─── COUNTER TIMER ───
+        const deadline = new Date('2026-05-30T23:59:59'); // change this to your closing date
+        function pad(n) { return String(n).padStart(2, '0'); }
+        function tick() {
+            const diff = deadline - Date.now();
+            if (diff <= 0) {
+            document.getElementById('daysLeft').textContent  = '00';
+            document.getElementById('hoursLeft').textContent = '00';
+            document.getElementById('minsLeft').textContent  = '00';
+            document.getElementById('secsLeft').textContent  = '00';
+            return;
+            }
+            document.getElementById('daysLeft').textContent  = pad(Math.floor(diff / 86400000));
+            document.getElementById('hoursLeft').textContent = pad(Math.floor((diff % 86400000) / 3600000));
+            document.getElementById('minsLeft').textContent  = pad(Math.floor((diff % 3600000) / 60000));
+            document.getElementById('secsLeft').textContent  = pad(Math.floor((diff % 60000) / 1000));
+        }
+
+        tick();
+        setInterval(tick, 1000);
+
+
+    /* ── MODALS ── */
+    function openVisit() {
+        currentModalType = 'visit';
+        document.getElementById('visitDateGroup').style.display = 'block';
+        document.getElementById('modalTitle').textContent = 'Book a School Visit';
+        document.getElementById('modalBtnText').textContent = 'Confirm My School Visit';
+        document.getElementById('modalIcon').innerHTML = '<svg width="26" height="26" fill="none" stroke="#4A6C8C" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
+        const minDate = new Date().toISOString().split('T')[0];
+        document.getElementById('mDate').min = minDate;
+        document.getElementById('modalBackdrop').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function openAdmission() {
+        currentModalType = 'admission';
+        document.getElementById('visitDateGroup').style.display = 'none';
+        document.getElementById('modalTitle').textContent = 'Admission Inquiry';
+        document.getElementById('modalBtnText').textContent = 'Submit Admission Inquiry';
+        document.getElementById('modalIcon').innerHTML = '<svg width="26" height="26" fill="none" stroke="#4A6C8C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="2"/><path d="M10 11c0-1.1.9-2 2-2s2 .9 2 2v5l2 4H8l2-4v-5z"/></svg>';
+        document.getElementById('modalBackdrop').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        document.getElementById('modalBackdrop').style.display = 'none';
+        document.body.style.overflow = '';
+        clearModalErrors();
+    }
+    function clearModalErrors() {
+        ['errName','errEmail','errPhone','errAge','errDate'].forEach(id => { document.getElementById(id).textContent = ''; });
+        document.querySelectorAll('.modal-input').forEach(el => el.classList.remove('error'));
+    }
+    function handleModalSubmit(e) {
+        e.preventDefault();
+        clearModalErrors();
+        let valid = true;
+        const name = document.getElementById('mName').value.trim();
+        const email = document.getElementById('mEmail').value.trim();
+        const phone = document.getElementById('mPhone').value.trim();
+        const age = document.getElementById('mAge').value;
+        const date = document.getElementById('mDate').value;
+        const branch = document.getElementById('mBranch').value;
+
+        if (!name) { document.getElementById('errName').textContent='Name is required'; document.getElementById('mName').classList.add('error'); valid=false; }
+        if (!email || !/\S+@\S+\.\S+/.test(email)) { document.getElementById('errEmail').textContent='Valid email required'; document.getElementById('mEmail').classList.add('error'); valid=false; }
+        if (!phone || phone.length < 10) { document.getElementById('errPhone').textContent='Valid phone number required'; document.getElementById('mPhone').classList.add('error'); valid=false; }
+        if (!age) { document.getElementById('errAge').textContent="Please select child's age"; document.getElementById('mAge').classList.add('error'); valid=false; }
+        if (currentModalType==='visit' && !date) { document.getElementById('errDate').textContent='Please select a date'; document.getElementById('mDate').classList.add('error'); valid=false; }
+        if (!valid) return;
+
+        const btn = document.getElementById('modalSubmitBtn');
+        btn.disabled = true;
+        document.getElementById('modalBtnText').textContent = 'Sending your request...';
+
+        setTimeout(() => {
+        addInquiry(name, branch, currentModalType==='visit'?'School Visit':'Admission');
+        const msg = currentModalType==='visit'
+            ? `Thank you, ${name.split(' ')[0]}! Your visit is confirmed for ${date}. Our team will call you shortly.`
+            : `Thank you! We've received your admission request for a ${age} old child. Expect a call within 15 minutes.`;
+        closeModal();
+        btn.disabled = false;
+        alert(msg);
+        }, 850);
+    }
+
+
+    /* ── LIGHTBOX ── */
+    function openLightbox(idx) { lightboxIndex = idx; updateLightbox(); document.getElementById('lightboxBackdrop').style.display='flex'; document.body.style.overflow='hidden'; }
+    function closeLightbox() { document.getElementById('lightboxBackdrop').style.display='none'; document.body.style.overflow=''; }
+    function changeLightbox(dir) { lightboxIndex = (lightboxIndex + dir + dayActivities.length) % dayActivities.length; updateLightbox(); }
+    function updateLightbox() {
+        const act = dayActivities[lightboxIndex];
+        document.getElementById('lbImg').src = act.image;
+        document.getElementById('lbImg').alt = act.title;
+        document.getElementById('lbTime').textContent = act.time;
+        document.getElementById('lbTitle').textContent = act.title;
+        document.getElementById('lbDesc').textContent = act.desc;
+        document.getElementById('lbCounter').textContent = (lightboxIndex+1) + ' / ' + dayActivities.length;
+    }
+    </script>
+
+    
+</body>
+</html>
+
+    
