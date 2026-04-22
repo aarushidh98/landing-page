@@ -352,9 +352,10 @@ nav {
 .values-left { flex: 5 0 0; }
 .values-inner h2 { font-size: clamp(36px, 4.5vw, 54px); line-height: 1.05; color: var(--text-dark); margin-top: 10px; }
 .values-inner-p { margin-top: 18px; max-width: 512px; font-size: 18px; color: var(--text-light); margin-bottom: 36px; line-height: 1.6; font-weight: 500; }
-.values-right { flex: 6 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.values-right { flex: 6 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 
 .value-card {
+  height: 300px;
   background: white;
   border: 3px solid var(--coral); border-radius: 28px;
   padding: 28px;
