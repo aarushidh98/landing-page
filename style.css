@@ -424,7 +424,7 @@ nav {
 .exp-panel { display: none; }
 .exp-panel.active {
   padding: 0px!important;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+  display: grid; grid-template-columns: 1.5fr 2fr; gap: 2rem;
   background: linear-gradient(135deg, #FFF5FF, #F0F8FF);
   border-radius: 28px; padding: 3rem;
   border: 3px solid var(--lavender);
