@@ -830,7 +830,7 @@ footer {
 /* ══════════════ SECTION COMMON ══════════════ */
 .inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 .divider { border-top: 3px dashed #e0d8f0; }
-#experience > div { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
+#experience > div { max-width: 1200px; margin: 0 auto; padding: 30px 24px; }
 
 
 /* ══════════════ RESPONSIVE ══════════════ */
