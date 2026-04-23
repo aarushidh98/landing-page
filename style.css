@@ -321,6 +321,10 @@ nav {
 .concern-card.orange:hover { box-shadow: 10px 10px 0 var(--hot-blue); }
 .concern-card.orange::before { content: '🌟'; }
 
+.concern-card.pink { background: #ff6b9d30; border:3px solid var(--candy-pink); box-shadow: 6px 6px 0 var(--candy-pink); }
+.concern-card.pink:hover { box-shadow: 10px 10px 0 var(--candy-pink); }
+.concern-card.pink::before { content: '✨'; }
+
 .concern-q {
   color: var(--text-dark); font-family: 'Lilita One', sans-serif; font-size: 24px;
   line-height: 1.15; padding-right: 32px;
