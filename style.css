@@ -318,7 +318,7 @@ nav {
 .concern-card:hover { transform: translateY(-8px) rotate(-0.5deg); box-shadow: 10px 10px 0 var(--lime); }
 
 .concern-card.orange { background: #4d96ffb0; border:3px solid var(--hot-blue); box-shadow: 6px 6px 0 var(--hot-blue); }
-.concern-card.orange:hover { box-shadow: 10px 10px 0 #c94020; }
+.concern-card.orange:hover { box-shadow: 10px 10px 0 var(--hot-blue); }
 .concern-card.orange::before { content: '🌟'; }
 
 .concern-q {
