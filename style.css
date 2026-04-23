@@ -301,12 +301,12 @@ nav {
 .concerns-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
 
 .concern-card {
-  background: var(--hot-blue); border-radius: 28px; padding: 40px;
+  background: var(--lime); border-radius: 28px; padding: 40px;
   border: 3px solid transparent;
   cursor: pointer;
   transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
   display: flex; flex-direction: column;
-  box-shadow: 6px 6px 0 #2960c4;
+  box-shadow: 6px 6px 0 var(--lime);
   position: relative; overflow: hidden;
 }
 .concern-card::before {
