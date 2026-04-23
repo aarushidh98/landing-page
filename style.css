@@ -320,13 +320,13 @@ nav {
 .concern-card.orange::before { content: '🌟'; }
 
 .concern-q {
-  color: white; font-family: 'Lilita One', sans-serif; font-size: 22px;
+  color: var(--text-dark); font-family: 'Lilita One', sans-serif; font-size: 22px;
   line-height: 1.15; padding-right: 32px;
 }
-.concern-a { margin-top: 18px; margin-bottom: 20px; color: rgba(255,255,255,0.92); font-size: 16px; line-height: 1.55; font-weight: 500; }
+.concern-a { margin-top: 18px; margin-bottom: 20px; color: var(--text-dark); font-size: 16px; line-height: 1.55; font-weight: 500; }
 .concerns-footer {
   font-family: 'Baloo 2', sans-serif; font-size: 14px; font-weight: 800;
-  text-align: left; margin-top: auto; color: white;
+  text-align: left; margin-top: auto; color:var(--text-dark);
   display: flex; align-items: center; gap: 6px;
 }
 
