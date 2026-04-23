@@ -302,7 +302,6 @@ nav {
 
 .concern-card {
   background: var(--lime); border-radius: 28px; padding: 40px;
-  border: 3px solid transparent;
   cursor: pointer;
   transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
   display: flex; flex-direction: column;
@@ -314,9 +313,9 @@ nav {
   position: absolute; top: 16px; right: 16px;
   font-size: 24px; opacity: 0.6;
 }
-.concern-card:hover { transform: translateY(-8px) rotate(-0.5deg); box-shadow: 10px 10px 0 #2960c4; }
+.concern-card:hover { transform: translateY(-8px) rotate(-0.5deg); box-shadow: 10px 10px 0 var(--lime); }
 
-.concern-card.orange { background: var(--coral); box-shadow: 6px 6px 0 #c94020; }
+.concern-card.orange { background: var(--hot-blue); box-shadow: 6px 6px 0 var(--hot-blue); }
 .concern-card.orange:hover { box-shadow: 10px 10px 0 #c94020; }
 .concern-card.orange::before { content: '🌟'; }
 
