@@ -302,11 +302,13 @@ nav {
 
 .concern-card {
   background: var(--lime); border-radius: 28px; padding: 40px;
+  border: 3px solid var(--lime)
   cursor: pointer;
   transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
   display: flex; flex-direction: column;
   box-shadow: 6px 6px 0 var(--lime);
   position: relative; overflow: hidden;
+  height: 330px;
 }
 .concern-card::before {
   content: '✨';
@@ -315,15 +317,15 @@ nav {
 }
 .concern-card:hover { transform: translateY(-8px) rotate(-0.5deg); box-shadow: 10px 10px 0 var(--lime); }
 
-.concern-card.orange { background: var(--hot-blue); box-shadow: 6px 6px 0 var(--hot-blue); }
+.concern-card.orange { background: var(--hot-blue); border:3px solid var(--hot-blue); box-shadow: 6px 6px 0 var(--hot-blue); }
 .concern-card.orange:hover { box-shadow: 10px 10px 0 #c94020; }
 .concern-card.orange::before { content: '🌟'; }
 
 .concern-q {
-  color: var(--text-dark); font-family: 'Lilita One', sans-serif; font-size: 22px;
+  color: var(--text-dark); font-family: 'Lilita One', sans-serif; font-size: 24px;
   line-height: 1.15; padding-right: 32px;
 }
-.concern-a { margin-top: 18px; margin-bottom: 20px; color: var(--text-dark); font-size: 16px; line-height: 1.55; font-weight: 500; }
+.concern-a { margin-top: 18px; margin-bottom: 20px; color: var(--text-dark); font-size: 17px; line-height: 1.55; font-weight: 500; }
 .concerns-footer {
   font-family: 'Baloo 2', sans-serif; font-size: 14px; font-weight: 800;
   text-align: left; margin-top: auto; color:var(--text-dark);
