@@ -362,7 +362,7 @@ nav {
   padding: 28px;
   display: flex; flex-direction: column; gap: 14px;
   transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
-  box-shadow: 5px 5px 0 var(--coral);
+  box-shadow: 5px 5px 0 var(--candy-pink);
 }
 .value-card:hover { transform: translateY(-5px) rotate(0.5deg); box-shadow: 8px 8px 0 var(--candy-pink); }
 
