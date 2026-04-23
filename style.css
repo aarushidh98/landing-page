@@ -301,7 +301,7 @@ nav {
 .concerns-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
 
 .concern-card {
-  background: #6bcb7799; border-radius: 28px; padding: 40px;
+  background: #6bcb7738; border-radius: 28px; padding: 40px;
   border: 3px solid var(--lime);
   cursor: pointer;
   transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
@@ -317,7 +317,7 @@ nav {
 }
 .concern-card:hover { transform: translateY(-8px) rotate(-0.5deg); box-shadow: 10px 10px 0 var(--lime); }
 
-.concern-card.orange { background: #4d96ffb0; border:3px solid var(--hot-blue); box-shadow: 6px 6px 0 var(--hot-blue); }
+.concern-card.orange { background: #4d96ff3b; border:3px solid var(--hot-blue); box-shadow: 6px 6px 0 var(--hot-blue); }
 .concern-card.orange:hover { box-shadow: 10px 10px 0 var(--hot-blue); }
 .concern-card.orange::before { content: '🌟'; }
 
