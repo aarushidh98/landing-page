@@ -1041,14 +1041,14 @@ footer {
   .bst-desc-sub { font-size: 8px; }
 
   /* OTHER SECTIONS */  
-  .concerns-grid { grid-template-columns: 1fr; gap: 30px;}
+  .concerns-grid { grid-template-columns: 1fr; gap: 24px;}
   .concern-card { padding: 40px 24px; height: 320px;}
   .safety-grid { grid-template-columns: 1fr; }
   .value-card { height: 300px!important;}  
   .values-inner h2 { font-size: 38px;}
   .values-inner-p { font-size: 19px;}
   .value-card-blue { height: 300px!important; }
-  .values-right { grid-template-columns: 1fr; }
+  .values-right { grid-template-columns: 1fr; gap:24px}
   .exp-tabs { display: grid; grid-template-columns: 1fr 1fr; }
   #experience > div { max-width: 1200px; margin: 0 auto; padding: 30px 0px;}
   .exp-panel.active { grid-template-columns: 1fr; }
@@ -1061,6 +1061,6 @@ footer {
   .timeline-nav { padding: 0px;}
   #journey-p { font-size: 19px;}
   #final-cta {text-align: center;}
-  #final-cta::before {opacity: 0.25;}
+  #final-cta::before {opacity: 0.25; top: 96px; left: 0px;}
   #final-cta::after {opacity: 0.25;}
 }
