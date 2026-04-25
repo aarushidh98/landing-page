@@ -360,7 +360,7 @@ nav {
 .values-right { flex: 6 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 
 .value-card {
-  height: 260px;
+  height: 290px;
   background: white;
   border: 3px solid var(--candy-pink); border-radius: 28px;
   padding: 28px;
@@ -382,7 +382,7 @@ nav {
 .card-wrapper:hover { transform: translateY(-5px) rotate(-0.5deg); box-shadow: 8px 8px 0 #2960c4; }
 
 .value-card-blue {
-  height: 260px!important;
+  height: 290px!important;
   background: white; padding: 28px;
   display: flex; flex-direction: column; gap: 14px; height: 100%;
   clip-path: none;
