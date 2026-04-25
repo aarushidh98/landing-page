@@ -33,7 +33,7 @@
 /* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-* { -webkit-tap-highlight-color: transparent; }
+
 body {
   font-family: 'Baloo 2', system-ui, sans-serif;
   color: var(--text-dark);
@@ -406,7 +406,7 @@ nav {
 
 /* ══════════════ EXPERIENCE TABS ══════════════ */
 .exp-header { margin-bottom: 2rem; }
-.exp-header h2 { font-size: clamp(36px, 4.5vw, 54px); margin-top: 10px; }
+.exp-header h2 { font-size: clamp(38px, 4.5vw, 54px); margin-top: 10px; }
 .exp-header p { font-size: 18px; color: var(--text-light); margin-top: 16px; line-height: 1.6; font-weight: 500; max-width: 700px; margin-left: auto; margin-right: auto; }
 
 .exp-tabs {
@@ -462,7 +462,7 @@ nav {
   padding: 80px 24px;
   border-top: 3px dashed var(--lime);
 }
-.safety-section h2 { font-size: clamp(36px, 4.5vw, 54px); margin-top: 10px; }
+.safety-section h2 { font-size: clamp(38px, 4.5vw, 54px); margin-top: 10px; }
 .safety-section .center { max-width: 1100px; text-align: center; margin: 0 auto 48px; }
 
 .safety-grid { max-width: 1100px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0 auto; padding: 0 0px 30px; }
@@ -482,7 +482,7 @@ nav {
   font-family: 'Lilita One', sans-serif;
   font-size: 18px; color: var(--text-dark); margin-bottom: 4px; line-height: 1.2;
 }
-.safety-desc { font-size: 14px; color: var(--text-light); line-height: 1.4; font-weight: 500; }
+.safety-desc { font-size: 15px; color: var(--text-light); line-height: 1.4; font-weight: 500; }
 
 @media (max-width: 640px) { .safety-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -494,7 +494,7 @@ nav {
   border-top: 3px dashed var(--sunny-yellow);
 }
 #journey .inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
-#journey h2 { font-size: clamp(36px, 4.5vw, 54px); margin-top: 10px; }
+#journey h2 { font-size: clamp(38px, 4.5vw, 54px); margin-top: 10px; }
 #journey-p { font-size: 18px; color: var(--text-light); margin-top: 16px; font-weight: 500; }
 
 .timeline-nav {
@@ -537,7 +537,7 @@ nav {
 
 .timeline-period { text-transform: uppercase; color: rgba(255,255,255,0.8); font-size: 12px; letter-spacing: 3px; font-weight: 700; margin-bottom: 6px; }
 .timeline-heading { color: white; font-family: 'Lilita One', sans-serif; font-size: clamp(28px,3.5vw,44px); line-height: 1.05; margin: .5rem 0 1rem; }
-.timeline-text { color: rgba(255,255,255,0.92); margin-bottom: 20px; font-size: 16px; line-height: 1.55; font-weight: 500; }
+.timeline-text { color: rgba(255,255,255,0.92); margin-bottom: 20px; font-size: 17px; line-height: 1.55; font-weight: 500; }
 
 .btn-journey {
   display: inline-block; margin-top: 1.5rem;
@@ -558,7 +558,7 @@ nav {
 }
 #testimonials .inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 #testimonials .center { text-align: center; margin-bottom: 48px; }
-#testimonials h2 { font-size: clamp(36px, 4.5vw, 54px); margin-top: 10px; }
+#testimonials h2 { font-size: clamp(38px, 4.5vw, 54px); margin-top: 10px; }
 
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
 @media (max-width: 900px) { .testimonials-grid { grid-template-columns: repeat(2,1fr); } }
@@ -585,7 +585,7 @@ nav {
 .stars { display: flex; gap: .25rem; margin-bottom: 1.25rem; }
 .star-icon { color: var(--sunny-yellow); filter: drop-shadow(0 0 2px #FFD93D88); }
 
-.testimonial-text { font-size: clamp(15px,1.8vw,19px); line-height: 1.5; font-weight: 600; color: var(--text-dark); }
+.testimonial-text { font-size: clamp(17px,1.8vw,19px); line-height: 1.5; font-weight: 600; color: var(--text-dark); }
 .testimonial-footer { margin-top: 1.75rem; display: flex; justify-content: space-between; align-items: flex-end; }
 .testimonial-author strong { display: block; font-weight: 700; font-size: 15px; }
 .testimonial-author span { color: var(--text-light); font-size: 13px; font-weight: 500; }
@@ -621,7 +621,7 @@ nav {
 
 #final-cta h2 {
   color: white; font-family: 'Lilita One', sans-serif;
-  font-size: clamp(36px,5vw,62px); margin: 12px 0 1rem; line-height: 1.05;
+  font-size: clamp(38px,5vw,62px); margin: 12px 0 1rem; line-height: 1.05;
 }
 #final-cta h2 span { opacity: .85; }
 
@@ -1010,9 +1010,9 @@ footer {
 
   .hero-badge { font-size: 10px; letter-spacing: 0.8px; padding: 4px 12px; }
 
-  .hero h1 { font-size: clamp(28px, 9vw, 38px); margin-bottom: 12px; }
+  .hero h1 { font-size: 40px; margin-bottom: 12px; }
 
-  .hero p { font-size: 15px; margin-bottom: 20px; }
+  .hero p { font-size: 18px; margin-bottom: 20px; }
 
   .hero-btn-primary,
   .hero-btn-secondary {
@@ -1045,6 +1045,8 @@ footer {
   .concern-card { padding: 40px 24px; height: 320px;}
   .safety-grid { grid-template-columns: 1fr; }
   .value-card { height: 300px!important;}  
+  .values-inner h2 { font-size: 38px;}
+  .values-inner-p { font-size: 19px;}
   .value-card-blue { height: 300px!important; }
   .values-right { grid-template-columns: 1fr; }
   .exp-tabs { display: grid; grid-template-columns: 1fr 1fr; }
@@ -1053,6 +1055,12 @@ footer {
   .exp-img img { border-top-right-radius: 0; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;}
   .exp-content { padding: 40px 24px 0 24px;}
   .exp-header { padding-top: 0px !important;}
+  .exp-header p { font-size: 19px;}
+  .exp-highlights li { font-size: 16px;}
   .timeline-detail { grid-template-columns: 1fr!important; padding: 30px;}
   .timeline-nav { padding: 0px;}
+  #journey-p { font-size: 19px;}
+  #final-cta {text-align: center;}
+  #final-cta::before {opacity: 0.5;}
+  #final-cta::after {opacity: 0.5;}
 }
