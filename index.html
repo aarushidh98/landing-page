@@ -355,7 +355,7 @@
     <section class="safety-section" id="trust">   
         <div class="center">     
         <div class="section-blue">YOUR CHILD’S SAFETY IS OUR PRIORITY</div>
-        <h2>Every detail is designed with love and uncompromising care.</h2>
+        <h2>Every Detail is Designed with Love & Uncompromising Care.</h2>
         </div>
         <div class="safety-grid">
             <div class="safety-item">
@@ -502,7 +502,7 @@
     <div class="inner">
         <div class="center">
         <div class="section-blue">REAL STORIES FROM REAL PARENTS</div>
-        <h2>Parents who chose Bachpan <br> never looked back</h2>
+        <h2>Parents who Chose Bachpan <br> Never Looked Back</h2>
         </div>
 
         <div class="testimonials-grid" id="testimonialsGrid">
@@ -526,7 +526,7 @@
         <!-- RIGHT: all your content -->
         <div class="cta-content-col">
         <div class="cta-admissions-badge">ADMISSIONS OPEN FOR 2026-27</div>
-        <h2>Limited seats. <span>Don't miss this year.</span></h2>
+        <h2>Limited Seats. <span>Don't Miss This Year.</span></h2>
 
         <div class="countdown">
             <div class="count-block">
@@ -566,7 +566,7 @@
         <!-- Form -->
         <div>
         <div class="section-label">WE ARE HERE FOR YOU</div>
-        <h2 class="section-title" style="font-size:clamp(38px,4vw,60px);letter-spacing:-2.8px;margin-top:.5rem">Speak with our admissions team</h2>
+        <h2 class="section-title" style="font-size:clamp(38px,4.5vw,54px);margin-top:10px;">Speak with Our Admissions Team.</h2>
         <p class="contact-sub">Fill this form or call us. A counselor will personally guide you through the process and answer all your questions.</p>
 
         <form class="contact-form" onsubmit="handleContactSubmit(event)">
@@ -725,23 +725,12 @@
         </div>
     </div>
     </div>
-    
-    
-
-
-
-
-
-
-
-
-
-
 
     <script>
         // ─── ICON ───
         lucide.createIcons();    
     </script>    
+
     <script>
         function scrollToSection(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
@@ -802,9 +791,9 @@
 
             ];
 
-        const CARDS_PER_PAGE = 3;
+        
+        function getCardsPerPage() { return window.innerWidth <= 900 ? 2 : 3; }
         let currentPage = 0;
-        const totalPages = Math.ceil(testimonials.length / CARDS_PER_PAGE);
 
         const starsSVG = `
             <svg class="star-icon" width="21" height="21" viewBox="0 0 24 24" fill="#ffb600" stroke="#ffb600" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -815,38 +804,41 @@
         `;
 
         function renderTestimonials() {
+            const cardsPerPage = getCardsPerPage();
+            const totalPages = Math.ceil(testimonials.length / cardsPerPage);
             const grid = document.getElementById('testimonialsGrid');
-            const start = currentPage * CARDS_PER_PAGE;
-            const pageItems = testimonials.slice(start, start + CARDS_PER_PAGE);
+            const start = currentPage * cardsPerPage;
+            const pageItems = testimonials.slice(start, start + cardsPerPage);
 
             grid.innerHTML = pageItems.map((t, index) => `
-        <div class="testimonial-wrap">
-            <div>
-            <div class="stars">${starsSVG}</div>
-            <blockquote class="testimonial-text">"${t.text}"</blockquote>
-            </div>
-            <div class="testimonial-footer">
-            <div class="testimonial-author">
-                <strong>${t.name}</strong>
-                <span style="font-size:15px;">${t.child}</span>
-            </div>
-            ${index === pageItems.length - 1 ? `
-                <div class="btn-next-story" onclick="nextPage()">
-                Next story
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <div class="testimonial-wrap t-color-${(start + index) % 3}">
+                <div>
+                <div class="stars">${starsSVG}</div>
+                <blockquote class="testimonial-text">"${t.text}"</blockquote>
                 </div>
-            ` : ''}
+                <div class="testimonial-footer">
+                <div class="testimonial-author">
+                    <strong>${t.name}</strong>
+                    <span style="font-size:15px;">${t.child}</span>
+                </div>
+                ${index === pageItems.length - 1 ? `
+                    <div class="btn-next-story" onclick="nextPage()">
+                    Next story
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </div>
+                ` : ''}
+                </div>
             </div>
-        </div>
-        `).join('');
+            `).join('');
 
             renderDots();
         }
 
         function renderDots() {
+            const totalPages = Math.ceil(testimonials.length / getCardsPerPage());
             const dotsContainer = document.getElementById('testimonialDots');
             dotsContainer.innerHTML = Array.from({ length: totalPages }, (_, i) => `
-            <div class="dot ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})"></div>
+                <div class="dot ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})"></div>
             `).join('');
         }
 
@@ -856,6 +848,7 @@
         }
 
         function nextPage() {
+            const totalPages = Math.ceil(testimonials.length / getCardsPerPage());
             currentPage = (currentPage + 1) % totalPages;
             renderTestimonials();
         }
