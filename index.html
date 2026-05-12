@@ -36,22 +36,24 @@
             <!-- <button class="btn-outline" onclick="openVisitModal()">Book Visit</button> -->
             <button class="btn-solid" onclick="openAdmission()">Enquire Now</button>
             </div>
-            <button class="hamburger" onclick="toggleMobileMenu()"><i data-lucide="menu" style="width:24px;height:24px"></i></button>
-        </div>
-        <div class="mobile-menu" id="mobileMenu">
-            <button onclick="scrollTo('concerns')">Parent Concerns</button>
-            <button onclick="scrollTo('value')">Why Bachpan</button>
-            <button onclick="scrollTo('experience')">A Day at Bachpan</button>            
-            <button onclick="scrollTo('trust')">Trust &amp; Safety</button>
-            <button onclick="scrollTo('journey')">Growth Journey</button>
-            <button onclick="scrollTo('testimonials')">Parents Say</button>
-            <button onclick="scrollTo('contact')">Contact</button>
-            <div class="mobile-btns">
-            <!-- <button class="mobile-btn-outline" onclick="openVisitModal()">Book a Visit</button> -->
-            <button class="mobile-btn-solid" onclick="openAdmissionModal()">Enquire for Admission</button>
-            </div>
+            <button class="hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn">
+                <i data-lucide="menu" style="width:24px;height:24px" id="hamburgerIcon"></i>
+            </button>
         </div>
     </nav>
+        <div class="mobile-menu" id="mobileMenu">
+        <div class="mm-links">
+            <button onclick="mobileNav('concerns')">🏠 Parent Concerns</button>
+            <button onclick="mobileNav('values')">⭐ Why Bachpan</button>
+            <button onclick="mobileNav('experience')">🎨 A Day at Bachpan</button>
+            <button onclick="mobileNav('trust')">🛡️ Trust &amp; Safety</button>
+            <button onclick="mobileNav('journey')">🚀 Growth Journey</button>
+            <button onclick="mobileNav('testimonials')">💬 Parents Say</button>
+            <button onclick="mobileNav('contact')">📍 Contact</button>
+        </div>
+        <button class="mm-cta" onclick="openAdmissionModal()">Enquire for Admission</button>
+        </div>
+    
     
     <!-- HERO -->
     <section class="hero">
@@ -956,7 +958,23 @@
         document.getElementById('lbCounter').textContent = (lightboxIndex+1) + ' / ' + dayActivities.length;
     }
     </script>
+    <script>
+        function mobileNav(id) {
+  toggleMobileMenu();
+  setTimeout(() => scrollToSection(id), 300);
+}
 
+
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const icon = document.getElementById('hamburgerIcon');
+    menu.classList.toggle('open');
+    const isOpen = menu.classList.contains('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+    lucide.createIcons();
+}
+    </script>
     
 </body>
 </html>
