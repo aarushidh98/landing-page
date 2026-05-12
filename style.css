@@ -100,7 +100,7 @@ nav {
 /* .mobile-menu {
   display: none; flex-direction: column; gap: 12px;
   background: #FFFBF5; border-top: 3px dashed var(--sunny-yellow);
-  padding: 24px;
+  padding: 24px;j
 }
 .mobile-menu.open { display: flex; }
 .mobile-menu button { font-size: 17px; text-align: left; padding: 6px 0; color: var(--text-dark); font-weight: 600; }
@@ -164,7 +164,8 @@ nav {
   color: white;
   border-radius: 50px;
   padding: 16px;
-  font-size: 16px; font-weight: 700;
+  font-size: 20px; 
+  font-weight: 700;
   text-align: center;
   box-shadow: 0 4px 0 #c94070;
   transition: all .15s;
@@ -352,7 +353,7 @@ nav {
 
 .center { text-align: center; }
 
-.concerns { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+.concerns { max-width: 1100px; margin: 0 auto; padding: 7rem 24px 5rem; }
 .concerns .center { margin-bottom: 52px; }
 .concerns h2 {
   font-size: clamp(38px, 5vw, 58px); line-height: 1.05;
@@ -411,7 +412,7 @@ nav {
 
 #values {
   background: linear-gradient(180deg, #FFFBF5 0%, #FFF5FF 100%);
-  padding: 80px 0;
+  padding: 7rem 0 5rem;
   border-top: 3px dashed #C77DFF44;
 }
 
@@ -521,7 +522,7 @@ nav {
 /* ══════════════ SAFETY ══════════════ */
 .safety-section {
   background: linear-gradient(135deg, #F0FFF4 0%, #F0F8FF 100%);
-  padding: 80px 24px;
+  padding: 7rem 24px 5rem;
   border-top: 3px dashed var(--lime);
 }
 .safety-section h2 { font-size: clamp(38px, 4.5vw, 54px); margin-top: 10px; }
@@ -552,7 +553,7 @@ nav {
 /* ══════════════ JOURNEY TIMELINE ══════════════ */
 #journey {
   background: linear-gradient(180deg, #FFF9E8 0%, #FFFBF5 100%);
-  padding: 5rem 0;
+  padding: 7rem 0 5rem;
   border-top: 3px dashed var(--sunny-yellow);
 }
 #journey .inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
@@ -615,7 +616,7 @@ nav {
 /* ══════════════ TESTIMONIALS ══════════════ */
 #testimonials {
   background: linear-gradient(180deg, #FFF0F7 0%, #FFFBF5 100%);
-  padding: 5rem 0 8rem;
+  padding: 7rem 0 5rem;
   border-top: 3px dashed var(--candy-pink);
 }
 #testimonials .inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
@@ -897,7 +898,8 @@ footer {
 /* ══════════════ SECTION COMMON ══════════════ */
 .inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 .divider { border-top: 3px dashed #e0d8f0; }
-#experience > div { max-width: 1200px; margin: 0 auto; padding: 30px 24px; }
+#experience > div { max-width: 1200px; margin: 0 auto;}
+#experience {padding:7rem 24px 5rem;}
 
 
 /* ══════════════ RESPONSIVE ══════════════ */
@@ -988,7 +990,7 @@ footer {
   }
 
   /* CONCERNS */
-  .concerns { padding: 60px 24px; }
+  
   .concerns-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .concern-card { padding: 24px 16px; }
   .concern-q { font-size: 21px; } 
@@ -1132,7 +1134,7 @@ footer {
   .values-right { grid-template-columns: 1fr; gap:24px}
   .exp-tabs { display: grid; grid-template-columns: 1fr 1fr; }
   .exp-tab {padding: 10px;}
-  #experience > div { max-width: 1200px; margin: 0 auto; padding: 30px 0px;}
+  #experience > div { max-width: 1200px; margin: 0 auto;}
   .exp-panel.active { grid-template-columns: 1fr; }
   .exp-img img { border-top-right-radius: 0; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;}
   .exp-content { padding: 40px 24px 0 24px;}
@@ -1144,7 +1146,5 @@ footer {
   #journey-p { font-size: 19px;}
   #final-cta {text-align: center;}
   #final-cta::before {opacity: 0.25; top: 196px; left: 0px;}
-  #final-cta::after {opacity: 0.25;}
-
-  
+  #final-cta::after {opacity: 0.25;}  
 }
